@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
-"""A Basic Flask app.
+"""This module setups a basic Flask app and creates route which renders
+html file to display an output as page.
 """
 from flask import Flask, render_template
-
+from typing import Any
 
 app = Flask(__name__)
-app.url_map.strict_slashes = False
 
 
 @app.route('/')
-def get_index() -> str:
-    """The home/index page.
-    """
+def index() -> str:
+    """Renders html page."""
     return render_template('0-index.html')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
