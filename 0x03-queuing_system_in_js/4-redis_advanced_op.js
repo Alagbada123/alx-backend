@@ -25,9 +25,9 @@ function main() {
     Paris: 2,
   };
   for (const [field, value] of Object.entries(hashObj)) {
-    updateHash('HolbertonSchools', field, value);
+    updateHash('ALXSchools', field, value);
   }
-  printHash('HolbertonSchools');
+  printHash('ALXSchools');
 }
 
 client.on('connect', () => {
